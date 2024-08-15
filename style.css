@@ -1,0 +1,18 @@
+* {
+    background-color: #131c2d;
+    color: #fff;
+    font-family: "Google Sans", sans-serif;
+}
+
+.glitch {
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 0 10px #00f;
+    font-size: 2rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
