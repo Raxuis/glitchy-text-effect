@@ -1,13 +1,24 @@
 const glitchChars = ['!', '@', '#', '$', '%', '?', '&', '*'];
 
-document.querySelectorAll('.glitch').forEach((element) => {
-  let originalText = element.textContent;
+const textInput = document.querySelector('#text-input');
+const hoverText = "Hover me !";
+let defaultText = textInput.value || hoverText;
+
+const updateTextContent = () => {
+  defaultText = textInput.value || hoverText;
+  document.querySelectorAll('.glitch').forEach((element) => {
+    element.textContent = defaultText;
+  });
+};
+
+textInput.addEventListener('input', updateTextContent);
+
+const applyGlitchEffect = (element) => {
   let interval;
   element.addEventListener('mouseenter', () => {
-    console.log('mouseover');
+    const originalText = defaultText;
     interval = setInterval(() => {
       const chars = originalText.split('');
-
       const glitchFrequency = document.querySelector('#glitch-frequency').value;
       const isGlitched = Math.random() < glitchFrequency;
 
@@ -22,6 +33,8 @@ document.querySelectorAll('.glitch').forEach((element) => {
 
   element.addEventListener('mouseleave', () => {
     clearInterval(interval);
-    element.textContent = originalText;
+    element.textContent = defaultText;
   });
-})
+};
+
+document.querySelectorAll('.glitch').forEach(applyGlitchEffect);
