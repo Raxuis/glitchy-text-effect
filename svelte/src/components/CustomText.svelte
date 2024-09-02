@@ -1,4 +1,8 @@
-<p class="glitch">Hover me !</p>
+<script>
+    export let textInput;
+</script>
+
+<p class="glitch">{textInput}</p>
 
 <style>
     .glitch {

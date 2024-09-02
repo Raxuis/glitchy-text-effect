@@ -1,3 +1,6 @@
+<script>
+</script>
+
 <input type="text" class="text-input" placeholder="Enter text" />
 
 <style>
