@@ -7,7 +7,7 @@
 
 <main class="center">
     <Header />
-    <Input />
+    <Input textInput={inputText} />
     <CustomText textInput={inputText} />
 </main>
 

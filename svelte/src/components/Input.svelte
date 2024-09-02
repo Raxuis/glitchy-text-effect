@@ -1,7 +1,18 @@
 <script>
+    export let inputText;
+
+    const editCustomText = (e) => {
+        inputText = e.target.value;
+        console.log(e.target.value);
+    };
 </script>
 
-<input type="text" class="text-input" placeholder="Enter text" />
+<input
+    type="text"
+    class="text-input"
+    placeholder="Enter text"
+    on:input={editCustomText}
+/>
 
 <style>
     .text-input {
