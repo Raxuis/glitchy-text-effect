@@ -2,8 +2,11 @@
     export let inputText;
 
     const editCustomText = (e) => {
-        inputText = e.target.value;
-        console.log(e.target.value);
+        if (e.target.value.length > 0) {
+            inputText = e.target.value;
+        } else {
+            inputText = "Hover me !";
+        }
     };
 </script>
 

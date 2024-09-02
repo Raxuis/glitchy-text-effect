@@ -2,13 +2,13 @@
     import CustomText from "./components/CustomText.svelte";
     import Header from "./components/Header.svelte";
     import Input from "./components/Input.svelte";
-    const inputText = "Hover me !";
+    let inputText = "Hover me !";
 </script>
 
 <main class="center">
     <Header />
-    <Input textInput={inputText} />
-    <CustomText textInput={inputText} />
+    <Input bind:inputText />
+    <CustomText bind:textInput={inputText} />
 </main>
 
 <style>
