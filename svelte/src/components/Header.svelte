@@ -23,3 +23,11 @@
         <output>0.7</output>
     </div>
 </header>
+
+<style>
+    .settings {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+</style>
