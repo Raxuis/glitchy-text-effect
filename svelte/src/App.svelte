@@ -3,10 +3,11 @@
     import Header from "./components/Header.svelte";
     import Input from "./components/Input.svelte";
     let inputText = "Hover me !";
+    let glitchFrequency = 0.7;
 </script>
 
 <main class="center">
-    <Header />
+    <Header bind:glitchFrequency />
     <Input bind:inputText />
     <CustomText bind:textInput={inputText} />
 </main>

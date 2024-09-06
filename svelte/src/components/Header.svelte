@@ -1,6 +1,7 @@
 <script>
+    export let glitchFrequency;
     const inputChange = (e) => {
-        console.log(e.target.value);
+        glitchFrequency = e.target.value;
     };
 </script>
 
@@ -17,10 +18,10 @@
             min="0"
             max="1"
             step="0.01"
-            value="0.7"
+            value={glitchFrequency}
             on:input={(e) => inputChange(e)}
         />
-        <output>0.7</output>
+        <output>{glitchFrequency}</output>
     </div>
 </header>
 
